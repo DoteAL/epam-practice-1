@@ -65,19 +65,18 @@
                 <p>There are other issues too beyond accessibility — it is harder to style the content using CSS, or manipulate it with JavaScript, for example, because there are no elements to use as selectors.</p>
             </section>
             <section id="page_layouts" aria-labelledby="page_layouts">
-                <h3>
-                    <a href="#page_layouts" title="Permalink to Page layouts">Page layouts</a>
-                </h3>
-                <p>In the bad old days, people used to create page layouts using HTML tables — using different table cells to contain the header, footer, sidebar, main content column, etc. This is not a good idea because a screen reader will likely give out confusing readouts, especially if the layout is complex and has many nested tables.</p>
-                <p>Try our example <a href="https://mdn.github.io/learning-area/accessibility/html/table-layout.html" target="_blank" rel="noopener">table-layout.html</a> example, which looks something like this:</p>
-                <p>If you try to navigate this using a screen reader, it will probably tell you that there's a table to be looked at (although some screen readers can guess the difference between table layouts and data tables). You'll then likely (depending on which screen reader you're using) have to go down into the table as an object and look at its features separately, then get out of the table again to carry on navigating the content.</p>
-                <p>Table layouts are a relic of the past — they made sense back when CSS support was not widespread in browsers, but now they just create confusion for screen reader users. Additionally, their source code requires more markup, which makes them less flexible and more difficult to maintain. You can verify these claims by comparing your previous experience with a <a href="https://mdn.github.io/learning-area/html/introduction-to-html/document_and_website_structure/" target="_blank" rel="noopener">more modern website structure example</a>, which could look something like this:</p>
-                <figure>
-                    <img src="./images/code-example.PNG" alt="Modern website structure example">
-                    <figcaption>Modern website structure example</figcaption>
-                </figure>
-                <p>If you try our more modern structure example with a screen reader, you'll see that the layout markup no longer gets in the way and confuses the content readout. It is also much leaner and smaller in terms of code size, which means easier to maintain code, and less bandwidth for the user to download (particularly prevalent for those on slow connections).</p>
-            </section>
+    <h3>
+        <a href="#page_layouts" title="Permalink to Page layouts">Page layouts</a>
+    </h3>
+    <p>In the bad old days, people used to create page layouts using HTML tables — using different table cells to contain the header, footer, sidebar, main content column, etc. This is not a good idea because a screen reader will likely give out confusing readouts, especially if the layout is complex and has many nested tables.</p>
+    <p>Try our example <a href="https://mdn.github.io/learning-area/accessibility/html/table-layout.html" target="_blank" rel="noopener">table-layout.html</a> example, which looks something like this:</p>
+    <figure>
+        <img src="./images/code-example.PNG" alt="Modern website structure example">
+        <figcaption>Modern website structure example: an optimized structure using semantic HTML.</figcaption>
+    </figure>
+    <p>If you try to navigate this using a screen reader, it will probably tell you that there's a table to be looked at (although some screen readers can guess the difference between table layouts and data tables). You'll then likely (depending on which screen reader you're using) have to go down into the table as an object and look at its features separately, then get out of the table again to carry on navigating the content.</p>
+     <p>Table layouts are a relic of the past — they made sense back when CSS support was not widespread in browsers, but now they just create confusion for screen reader users. Additionally, their source code requires more markup, which makes them less flexible and more difficult to maintain. You can verify these claims by comparing your previous experience with a <a href="https://mdn.github.io/learning-area/html/introduction-to-html/document_and_website_structure/" target="_blank" rel="noopener">more modern website structure example</a>, which could look something like this:</p>
+</section>
         </article>
     </main>
     <aside>
