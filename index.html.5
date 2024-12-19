@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+    <head>
+        <title>Structuring Tabular Data</title>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <h1>Structuring Tabular Data</h1>
+        <table>
+            <caption>Shop list for 25th of May</caption>
+            <colgroup>
+                <col span="2">
+                <col span="2">
+                <col> 
+            </colgroup>
+            <thead>
+                <tr>
+                    <th rowspan="2" scope="col">Name</th>
+                    <th colspan="3" scope="col">Purchases</th>
+                </tr>
+                <tr>
+                    <th scope="col">Price</th>
+                    <th scope="col">Amount (kilo)</th>
+                    <th scope="col">Sum</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Apple</td>
+                    <td>20</td>
+                    <td>2</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td>Potato</td>
+                    <td>10</td>
+                    <td>3</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>Carrot</td>
+                    <td>15</td>
+                    <td>1</td>
+                    <td>15</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">Total</td>
+                    <td>3</td>
+                    <td>85</td>
+                </tr>
+            </tfoot>
+        </table>
+    </body>
+</html>
+
