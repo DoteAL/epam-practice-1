@@ -1,0 +1,116 @@
+/* Common */
+nav ul {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+/* Header */
+.header_line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title_section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 60px;
+  background-color: var(--primary-color);
+  border-radius: var(--border-radius-size);
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+}
+
+@media (max-width: 600px) {
+  .title_section {
+    flex-wrap: wrap;
+  }
+}
+
+/* Main */
+main section div {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 var(--space-size);
+}
+
+.column {
+  margin: var(--space-size);
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  padding: var(--space-size);
+}
+
+section:first-of-type div:first-of-type .column:first-of-type {
+  flex-grow: 2;
+  flex-shrink: 2;
+  flex-basis: 22px;
+  height: 420px;
+  background: url('./images/cn-client-bg.jpeg') rgba(29, 14, 21, 0.3);
+  background-size: cover;
+  background-blend-mode: multiply;
+  padding: var(--space-size);
+  color: white;
+}
+
+div[class^="card"] {
+  display: flex;
+  /* Зробити елементи гнучким контейнером */
+  flex-direction: column;
+  /* Вирівнювати дочірні елементи вертикально */
+  justify-content: space-between;
+  /* Розподіл простору між дочірніми елементами */
+  padding: 16px;
+  /* Додатковий відступ для естетичного вигляду */
+  border: 1px solid #ddd;
+  /* Опціонально: додати рамку */
+  border-radius: 8px;
+  /* Опціонально: закруглення */
+  background-color: #f9f9f9;
+  /* Опціонально: фон */
+}
+.card-first {
+  order: 1;
+  flex-grow: 1;
+}
+
+.card-second {
+  order: 2;
+  flex-grow: 1; 
+}
+
+.card-third {
+  order: 3;
+  flex-grow: 1;
+}
+
+.card-fouth {
+  order: 4;
+  flex-grow: 1;
+}
+
+.card-fifth {
+  order: 5; 
+  flex-grow: 4;
+  flex-shrink: 4;
+  background-color: white;
+  color: var(--secondary-color);
+}
+
+.card-six {
+  order: 6; 
+  flex-grow: 4;
+  flex-shrink: 4;
+  background: var(--secondary-color);
+}
+
+/* Footer */
+footer {
+  margin: var(--space-size) calc(var(--space-size) * 2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
