@@ -1,0 +1,58 @@
+/**
+ * Обчислює суму двох чисел.
+ * @param {Number} number1 - Перше число
+ * @param {Number} number2 - Друге число
+ * @returns {Number} Сума number1 і number2
+ * @example
+ * getSum(4, 7); // 11
+ * getSum(9, -3); // 6
+ * getSum(0.2, 0.7); // 0.9
+ */
+module.exports.getSum = function getSum(number1, number2) {
+    return number1 + number2;
+};
+
+/**
+ * Формує строку вітання.
+ * @param {String} name - Ім'я
+ * @param {String} surname - Прізвище
+ * @param {Number} age - Вік
+ * @returns {String} Вітальний рядок
+ * @example
+ * greeting('Alice', 'Johnson', 7);
+ * // "Hello, my name is Alice Johnson and I am 7 years old."
+ * greeting('Bob', 'Smith', 9);
+ * // "Hello, my name is Bob Smith and I am 9 years old."
+ */
+module.exports.greeting = function greeting(name, surname, age) {
+    return `Hello, my name is ${name} ${surname} and I am ${age} years old.`;
+};
+
+/**
+ * Перевіряє, чи є число ідеальним квадратом.
+ * @param {Number} x - Число для перевірки
+ * @returns {Boolean} true, якщо x - ідеальний квадрат
+ * @example
+ * isSquare(4); // true
+ * isSquare(7); // false
+ * isSquare(9); // true
+ */
+module.exports.isSquare = function isSquare(x) {
+    if (x < 0) return false;
+    const sqrt = Math.sqrt(x);
+    return sqrt === Math.floor(sqrt);
+};
+
+// Приклади викликів
+console.log(module.exports.getSum(4, 7)); // 11
+console.log(module.exports.getSum(9, -3)); // 6
+console.log(module.exports.getSum(0.2, 0.7)); // 0.9 
+
+console.log(module.exports.greeting('Alice', 'Johnson', 7)); 
+// "Hello, my name is Alice Johnson and I am 7 years old."
+console.log(module.exports.greeting('Bob', 'Smith', 9)); 
+// "Hello, my name is Bob Smith and I am 9 years old."
+
+console.log(module.exports.isSquare(4)); // true
+console.log(module.exports.isSquare(7)); // false
+console.log(module.exports.isSquare(9)); // true
