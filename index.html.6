@@ -1,97 +1,92 @@
 <!DOCTYPE html>
-<html lang="en-US" dir="ltr">
-    <head>
-        <title>NASA Yearlong Simulated Mars Mission application form</title>
-        <meta charset="UTF-8">
-        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA Yearlong Simulated Mars Mission Application</title>
+</head>
+<body>
+    <form>
+        <!-- Contact Info Section -->
+        <section id="contact-info">
+            <h2>Contact Info</h2>
+            <label>
+                Full Name:
+                <input type="text" name="full-name">
+            </label>
+            <label>
+                Address:
+                <input type="text" name="address">
+            </label>
+            <label>
+                Email:
+                <input type="email" name="email">
+            </label>
+        </section>
 
-    <body>
-        <h1>NASA Yearlong Simulated Mars Mission application form</h1>
-
-        <img src="./images/NASA_logo.png" alt="NASA Logo" width="200px">
-
-        <p>
-            Mars is calling! NASA is seeking applicants for participation as a crew member during the first one-year analog mission in a habitat to simulate life on a distant world.
-        </p>
-
-        <p>
-            As NASA ventures farther into the cosmos, the astronaut experience will change. In preparation for the real-life challenges of future missions to Mars, NASA will study how highly motivated individuals respond under the rigor of a long-duration, ground-based simulation.
-        </p>
-
-        <p>If you are interested, please fill the form bellow:</p>
-
-        <form action="" method="post" enctype="multipart/form-data" name="applicant-data">
-            <h2>NASA programm application form</h2>
-            
-            <section id="contact-info">
-                <h3>Contact Info</h3>
-
-                <p>
-                    Full Name:
-                    <input type="text">
-                </p>
-
-                <p>
-                    Address:
-                    <input type="text">
-                </p>
-
-                <p>
-                    Email:
-                    <input type="text">
-                </p>
-            </section>
-
-            <section id="about">
-                <h3>About</h3>
-
+        <!-- About Section -->
+        <section id="about">
+            <h2>About</h2>
+            <fieldset>
+                <legend>University Degree</legend>
                 <ul>
                     <li>
                         <label>
+                            <input type="radio" name="degree" value="military">
                             Military
-                            <input type="text">
                         </label>
                     </li>
-
                     <li>
                         <label>
+                            <input type="radio" name="degree" value="technical">
                             Technical
-                            <input type="text">
                         </label>
                     </li>
-
                     <li>
                         <label>
+                            <input type="radio" name="degree" value="student">
                             Student
-                            <input type="text">
                         </label>
                     </li>
                 </ul>
-
-                <p id="bio-p">
-
-                </p>
-            </section>
-
-            <section id="participation-details">
-                <h3>Participation details</h3>
-
-                <p id="uniform-color-p">
-                
-                </p>
-
-                <p id="preferred-mission-role-p">
-                    
-                </p>
-            </section>
-
-            <p id="agree-part">
+            </fieldset>
+            <p id="bio-p">
+                <label for="bio">BIO</label>
+                <textarea name="bio" id="bio"></textarea>
             </p>
-            
-            <section id="agree-and-submit">
+        </section>
 
-            </section>
-        </form>
-    </body>
+        <!-- Participation Details Section -->
+        <section id="participation-details">
+            <h3>Participation Details</h3>
+            <details>
+                <summary>More info</summary>
+                Please, provide information about your preferences. We don't guarantee them, but we will try..
+            </details>
+            <p id="uniform-color-p">
+                <label for="uniform-color">Uniform color</label>
+                <input type="color" name="uniform-color" id="uniform-color">
+            </p>
+            <p id="preferred-mission-role-p">
+                <label for="preferred-mission-role">Preferred Role in a mission</label>
+                <input type="text" name="preferred-mission-role" id="preferred-mission-role" list="mission-roles">
+                <datalist id="mission-roles">
+                    <option value="Pilot"></option>
+                    <option value="Doctor"></option>
+                    <option value="Scientist"></option>
+                    <option value="Experimentator"></option>
+                </datalist>
+            </p>
+        </section>
+
+        <!-- Agree and Submit Section -->
+        <section id="agree-and-submit">
+            <label>
+                <input type="checkbox" name="user-agree">
+                I agree on terms and conditions.
+            </label>
+            <button type="submit">Send your data to NASA</button>
+        </section>
+    </form>
+</body>
 </html>
