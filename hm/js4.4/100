@@ -1,0 +1,44 @@
+/**
+ * Повертає мінімальне число з трьох.
+ *
+ * @param number1: {Number} Перше число.
+ * @param number2: {Number} Друге число.
+ * @param number3: {Number} Третє число.
+ * @returns {Number} Мінімальне число.
+ */
+module.exports.getMin = function getMin(number1, number2, number3) {
+    return Math.min(number1, number2, number3);
+};
+
+/**
+ * Перевіряє, чи всі числа парні, непарні, або змішані.
+ *
+ * @param x: {Number} Перше число.
+ * @param y: {Number} Друге число.
+ * @param z: {Number} Третє число.
+ * @returns {String} "even" (всі парні), "odd" (всі непарні) або "even/odd" (змішані).
+ */
+module.exports.evenOrOdd = function evenOrOdd(x, y, z) {
+    const isEven = (num) => num % 2 === 0;
+    const allEven = isEven(x) && isEven(y) && isEven(z);
+    const allOdd = !isEven(x) && !isEven(y) && !isEven(z);
+
+    if (allEven) return "even";
+    if (allOdd) return "odd";
+    return "even/odd";
+};
+
+/**
+ * Перевіряє, чи число знаходиться у діапазоні між x і y (включно).
+ *
+ * @param x: {Number} Перше число, одна межа діапазону.
+ * @param y: {Number} Друге число, інша межа діапазону.
+ * @param z: {Number} Число для перевірки.
+ * @returns {String} "In range" (в межах) або "Out of range" (поза межами).
+ */
+module.exports.inOrOutRange = function inOrOutRange(x, y, z) {
+    if (z >= Math.min(x, y) && z <= Math.max(x, y)) {
+        return "In range";
+    }
+    return "Out of range";
+};
